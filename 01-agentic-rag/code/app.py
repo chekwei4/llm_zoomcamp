@@ -38,7 +38,7 @@ def ask_question(question, pdf_text):
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant. Answer questions based only on the provided Hyrox Sports Science Report 2025. If the answer is not in the context, say so."},
+            {"role": "system", "content": "Answer based on the provided context from a PDF. Be concise."},
             {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {question}"}
         ]
     )
