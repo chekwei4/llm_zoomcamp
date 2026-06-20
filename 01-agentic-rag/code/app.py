@@ -50,8 +50,9 @@ st.caption("Ask anything about the Hyrox Sports Science Report 2025")
 with st.spinner("Loading PDF..."):
     pdf_text = get_pdf_text(PDF_URL)
 
-question = st.text_input("Ask a question:")
 model = st.selectbox("Choose a model:", ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-5.5"])
+
+question = st.text_input("Ask a question:")
 
 if question:
     with st.spinner("Thinking..."):
